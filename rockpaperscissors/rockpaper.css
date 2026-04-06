@@ -1,0 +1,100 @@
+nav{
+    background-color: black;
+    color:aliceblue;
+    height:10rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     
+}
+.space{
+    height: 200px;
+    width: 200px;
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    border:3px solid black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    gap:5rem;
+}
+#rock:hover{
+    background-color: #2ca528;
+    color:aliceblue;
+    border-bottom:15px solid #0e0e0e;
+     transition: all 0.3s ease-in-out;
+
+}
+#paper:hover{
+    background-color: #2c80a5;
+    color:azure;
+    border-bottom:15px solid #0e0e0e;
+     transition: all 0.3s ease-in-out;
+}
+#scissors:hover{
+    background-color: #513bb5;
+    color:antiquewhite;
+    border-bottom:15px solid #0e0e0e;
+     transition: all 0.3s ease-in-out;
+}
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    font-size: 3rem;
+}
+#home{
+    height: 40px;
+    width: 60px;
+    background-color: #ecf248;
+    border-radius: 10px;
+    border: 3px solid black;
+    text-align: center;
+    align-content: center;
+   
+    font-size: large;
+    font-style: italic;
+    position:absolute;
+    left: 20px;
+    top:15%;
+
+}
+#back{
+    height: 40px;
+    width: 60px;
+    background-color: #ecf248;
+    border-radius: 10px;
+    border: 3px solid black;
+    text-align: center;
+    align-content: center;
+   
+    font-size: large;
+    font-style: italic;
+    position:absolute;
+    left:6%;
+    top:15%;
+
+}
+.com:active{
+  
+transform: scale(0.8);
+
+}
+
+a{
+    text-decoration: none;
+}
+h1{
+    position:absolute;
+}

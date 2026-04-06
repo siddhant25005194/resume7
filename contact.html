@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href ="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<div id="contact">
+    <div class="back">
+            <a href="index.html">Home</a>
+        </div>
+    <div class="container">
+        
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> siddhant.25005194@kiet.edu</p>
+               <p><i class="fa-solid fa-phone"></i> 921455654</p>
+
+                    <div class="social-icons">
+                         <a href="https://www.linkedin.com/feed/" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/siddhant00540?igsh=MXMxM3lqYWk5YXo1bA==" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                          <a href="https://github.com/siddhant205singh-ctrl" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                          </div>
+                           
+                </div>
+             <div class="contact-right">
+                <form name="Contact Form">
+	
+      <input name="name" type ="text" placeholder="Your Name" >
+	<input name="email" type="email" placeholder="Email" />
+    <textarea name ="message" rows="6" placeholder="Your Message" ></textarea>
+	<button type="submit" class = "btn btn2">Submit</button>
+</form>
+                
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+   
+    <script>
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbyFEOs5-eY97ChsdH52eh4T0mV_U6pQbH4NWT6DZjzKamvm9hq29n5XcyvGDZKzplNH/exec'
+	const form = document.forms['Contact Form']
+    const msg = document.getElementById("msg");
+	form.addEventListener('submit', e => {
+		e.preventDefault()
+		fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+			.then(response => response.json())
+			.then(response =>{
+                msg.innerHTML = "Message Sent successfully";
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                },3000)
+                form.reset();
+            })
+			.catch(error => console.error('Error!', error.message))
+
+	})
+</script>
+</body>
+</html>
